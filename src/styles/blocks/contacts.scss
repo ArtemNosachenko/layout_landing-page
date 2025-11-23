@@ -1,0 +1,117 @@
+.contacts {
+  &__wrapper {
+    display: grid;
+  }
+
+  &__content {
+    @include pageGrid;
+
+    row-gap: 48px;
+  }
+  &__input {
+    grid-column: 1 / -1;
+    display: grid;
+    row-gap: 16px;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 6;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 9 / -1;
+    }
+    &--title {
+      margin: 0;
+      margin-bottom: 8px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &--text {
+      margin: 0;
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      text-decoration: none;
+      &:hover {
+        color: wheat;
+      }
+      &:focus,
+      &:active,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+  &__button {
+    margin-top: 16px;
+    font-family: Poppins, sans-serif;
+    height: 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    background-color: #fff;
+    color: #1d1d1d;
+    border: transparent;
+    border-radius: 40px;
+    &:hover {
+      background-color: #e8e8f0;
+      color: #1d1d1d;
+    }
+    &:active {
+      background-color: #e8e8f0;
+      color: #1d1d1d;
+    }
+  }
+}
+
+.input {
+  &__name,
+  &__email,
+  &__message {
+    padding: 14px 16px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  background-color: #e8e8f0;
+  height: 48px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  outline: none;
+  &__message {
+    height: 148px;
+    resize: none;
+    border-radius: 16px;
+  }
+  &::placeholder {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #292929;
+  }
+  &:hover {
+    border: solid 1px #e8e8f0;
+  }
+  &:focus {
+    border: 2px solid #e8e8f0;
+  }
+}

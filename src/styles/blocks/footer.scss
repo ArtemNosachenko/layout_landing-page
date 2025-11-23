@@ -1,0 +1,16 @@
+.footer__img {
+  width: calc(100vw + 111px);
+  right: 0;
+  position: absolute;
+  height: 200px;
+
+  @include onTablet {
+    width: calc(100vw + 278px);
+    height: 480px;
+  }
+
+  @include onDesktop {
+    width: calc(100vw + 350px);
+    height: 555px;
+  }
+}
