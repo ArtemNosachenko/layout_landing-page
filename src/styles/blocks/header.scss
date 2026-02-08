@@ -17,7 +17,7 @@
     font-weight: 700;
     font-style: Bold;
 
-    @include titleSize;
+    @include title-size;
 
     line-height: 100%;
     letter-spacing: -1.5px;
@@ -26,6 +26,6 @@
   }
 
   &__bottom {
-    @include contentPaddingBottom;
+    @include content-padding-bottom;
   }
 }

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include onTablet {
+  @include on-tablet {
     padding-block: 36px;
   }
 
@@ -54,5 +54,17 @@
     letter-spacing: 2px;
     color: $main-text-color;
     text-decoration: none;
+  }
+}
+
+.menu .nav__link {
+  display: inline-block;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    color: #ff6600;
+    transform: translateX(6px);
   }
 }

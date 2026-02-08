@@ -1,16 +1,29 @@
-.footer__img {
-  width: calc(100vw + 111px);
-  right: 0;
-  position: absolute;
-  height: 200px;
+.footer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1d1d1d;
+  position: relative;
+  height: auto;
 
-  @include onTablet {
-    width: calc(100vw + 278px);
-    height: 480px;
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 
-  @include onDesktop {
-    width: calc(100vw + 350px);
-    height: 555px;
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+
+    @include on-tablet {
+      height: 480px;
+    }
+
+    @include on-desktop {
+      height: 555px;
+    }
   }
 }

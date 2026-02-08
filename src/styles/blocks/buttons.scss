@@ -13,12 +13,12 @@
     line-height: 27px;
     cursor: pointer;
 
-    @include onTablet {
+    @include on-tablet {
       width: 392px;
       height: 56px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       width: 324px;
       height: 56px;
     }

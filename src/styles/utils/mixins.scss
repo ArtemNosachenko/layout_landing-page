@@ -1,23 +1,23 @@
-@mixin onTablet {
+@mixin on-tablet {
   @media (min-width: $tablet-min-width) {
     @content;
   }
 }
 
-@mixin onDesktop {
+@mixin on-desktop {
   @media (min-width: $desktop-min-width) {
     @content;
   }
 }
 
-@mixin contentPaddingInline() {
+@mixin content-padding-inline() {
   padding-inline: 20px;
 
-  @include onTablet {
+  @include on-tablet {
     padding-inline: 72px;
   }
 
-  @include onDesktop() {
+  @include on-desktop {
     max-width: 1020px;
     margin-inline: auto;
     padding-inline: 120px;
@@ -25,45 +25,47 @@
 }
 
 .container {
-  @include contentPaddingInline;
+  @include content-padding-inline;
 }
 
-@mixin contentPaddingBottom() {
+@mixin content-padding-bottom() {
   padding-bottom: 88px;
 
-  @include onTablet {
+  @include on-tablet {
     padding-bottom: 130px;
   }
 
-  @include onDesktop() {
+  @include on-desktop {
     padding-bottom: 203px;
   }
 }
 
-@mixin titleSize() {
+@mixin title-size() {
   font-size: 36px;
 
-  @include onTablet {
+  @include on-tablet {
     font-size: 64px;
   }
 
-  @include onDesktop() {
+  @include on-desktop {
     font-size: 80px;
   }
 }
 
-@mixin pageGrid {
+@mixin page-grid {
   --colums: 2;
+
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(var(--colums), 1fr);
 
-  @include onTablet {
+  @include on-tablet {
     --colums: 6;
+
     column-gap: 24px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     --colums: 12;
   }
 }
